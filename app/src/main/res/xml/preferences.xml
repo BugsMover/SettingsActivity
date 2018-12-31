@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="key_root">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_preference_1"
+        android:title="Switch preference" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="check_box_preference_1"
+        android:title="Check box preference" />
+    <PreferenceCategory android:title="地理位置">
+
+        <ListPreference
+            android:entries="@array/listEntries"
+            android:entryValues="@array/listValues"
+            android:key="key_list_preference"
+            android:title="选择城市" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="信息">
+       <Preference android:title="关于"
+           android:summary="https://Github.com/ComeOnKissMe">
+           <intent
+               android:action="android.intent.action.VIEW"
+               android:data="https://Github.com/ComeOnKissMe"/>
+       </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
